@@ -9,3 +9,5 @@ folder is Pubmed and Coda and Citeseer datasets.
 One can see the results as well in the .txt files.
 
 For usage on colab change it to CUDA:0 other than that in train.py 1 should be the CUDA processor.
+
+To run see commands.txt
