@@ -1,0 +1,742 @@
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+/usr/local/lib/python3.10/dist-packages/dgl/heterograph.py:3719: DGLWarning: DGLGraph.adjacency_matrix_scipy is deprecated. Please replace it with:
+
+	DGLGraph.adjacency_matrix(transpose, scipy_fmt="csr").
+
+  dgl_warning('DGLGraph.adjacency_matrix_scipy is deprecated. '
+/content/gdrive/MyDrive/FinalProjectGNN/NAGphormer/utils.py:163: UserWarning: Casting complex values to real discards the imaginary part (Triggered internally at ../aten/src/ATen/native/Copy.cpp:299.)
+  lap_pos_enc = torch.from_numpy(EigVec[:,1:pos_enc_dim+1]).float()
+TransformerModel(
+  (att_embeddings_nope): Linear(in_features=3743, out_features=512, bias=True)
+  (layers): ModuleList(
+    (0): EncoderLayer(
+      (self_attention_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (self_attention): MultiHeadAttention(
+        (linear_q): Linear(in_features=512, out_features=512, bias=True)
+        (linear_k): Linear(in_features=512, out_features=512, bias=True)
+        (linear_v): Linear(in_features=512, out_features=512, bias=True)
+        (att_dropout): Dropout(p=0.1, inplace=False)
+        (output_layer): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (self_attention_dropout): Dropout(p=0.1, inplace=False)
+      (ffn_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ffn): FeedForwardNetwork(
+        (layer1): Linear(in_features=512, out_features=1024, bias=True)
+        (gelu): GELU(approximate='none')
+        (layer2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ffn_dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (final_ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=512, out_features=256, bias=True)
+  (attn_layer): Linear(in_features=1024, out_features=1, bias=True)
+  (Linear1): Linear(in_features=256, out_features=6, bias=True)
+)
+total params: 4154632
+Epoch: 0001 loss_train: 1.8342 acc_train: 0.1412 loss_val: 1.8246 acc_val: 0.1757
+Epoch: 0002 loss_train: 1.8278 acc_train: 0.1527 loss_val: 1.8145 acc_val: 0.1892
+Epoch: 0003 loss_train: 1.8206 acc_train: 0.1592 loss_val: 1.7996 acc_val: 0.1877
+Epoch: 0004 loss_train: 1.8050 acc_train: 0.1738 loss_val: 1.7804 acc_val: 0.1982
+Epoch: 0005 loss_train: 1.7892 acc_train: 0.1948 loss_val: 1.7574 acc_val: 0.2598
+Epoch: 0006 loss_train: 1.7646 acc_train: 0.2323 loss_val: 1.7310 acc_val: 0.3273
+Epoch: 0007 loss_train: 1.7381 acc_train: 0.2969 loss_val: 1.7019 acc_val: 0.4054
+Epoch: 0008 loss_train: 1.7107 acc_train: 0.3796 loss_val: 1.6705 acc_val: 0.4745
+Epoch: 0009 loss_train: 1.6795 acc_train: 0.4687 loss_val: 1.6371 acc_val: 0.5180
+Epoch: 0010 loss_train: 1.6443 acc_train: 0.5238 loss_val: 1.6021 acc_val: 0.5450
+Epoch: 0011 loss_train: 1.6093 acc_train: 0.5633 loss_val: 1.5659 acc_val: 0.5631
+Epoch: 0012 loss_train: 1.5712 acc_train: 0.5779 loss_val: 1.5283 acc_val: 0.5751
+Epoch: 0013 loss_train: 1.5338 acc_train: 0.5939 loss_val: 1.4895 acc_val: 0.5856
+Epoch: 0014 loss_train: 1.4936 acc_train: 0.6134 loss_val: 1.4499 acc_val: 0.6006
+Epoch: 0015 loss_train: 1.4514 acc_train: 0.6254 loss_val: 1.4097 acc_val: 0.6126
+Epoch: 0016 loss_train: 1.4086 acc_train: 0.6304 loss_val: 1.3691 acc_val: 0.6201
+Epoch: 0017 loss_train: 1.3665 acc_train: 0.6485 loss_val: 1.3284 acc_val: 0.6276
+Epoch: 0018 loss_train: 1.3224 acc_train: 0.6550 loss_val: 1.2880 acc_val: 0.6396
+Epoch: 0019 loss_train: 1.2805 acc_train: 0.6660 loss_val: 1.2483 acc_val: 0.6456
+Epoch: 0020 loss_train: 1.2373 acc_train: 0.6730 loss_val: 1.2094 acc_val: 0.6562
+Epoch: 0021 loss_train: 1.1942 acc_train: 0.6790 loss_val: 1.1717 acc_val: 0.6682
+Epoch: 0022 loss_train: 1.1514 acc_train: 0.6960 loss_val: 1.1356 acc_val: 0.6892
+Epoch: 0023 loss_train: 1.1101 acc_train: 0.7031 loss_val: 1.1012 acc_val: 0.6922
+Epoch: 0024 loss_train: 1.0701 acc_train: 0.7111 loss_val: 1.0689 acc_val: 0.6937
+Epoch: 0025 loss_train: 1.0313 acc_train: 0.7171 loss_val: 1.0388 acc_val: 0.6982
+Epoch: 0026 loss_train: 0.9938 acc_train: 0.7266 loss_val: 1.0108 acc_val: 0.7042
+Epoch: 0027 loss_train: 0.9575 acc_train: 0.7276 loss_val: 0.9850 acc_val: 0.7042
+Epoch: 0028 loss_train: 0.9233 acc_train: 0.7336 loss_val: 0.9612 acc_val: 0.7132
+Epoch: 0029 loss_train: 0.8901 acc_train: 0.7391 loss_val: 0.9397 acc_val: 0.7162
+Epoch: 0030 loss_train: 0.8563 acc_train: 0.7456 loss_val: 0.9205 acc_val: 0.7192
+Epoch: 0031 loss_train: 0.8228 acc_train: 0.7531 loss_val: 0.9037 acc_val: 0.7207
+Epoch: 0032 loss_train: 0.7948 acc_train: 0.7616 loss_val: 0.8892 acc_val: 0.7192
+Epoch: 0033 loss_train: 0.7652 acc_train: 0.7682 loss_val: 0.8765 acc_val: 0.7207
+Epoch: 0034 loss_train: 0.7386 acc_train: 0.7722 loss_val: 0.8653 acc_val: 0.7207
+Epoch: 0035 loss_train: 0.7101 acc_train: 0.7777 loss_val: 0.8560 acc_val: 0.7237
+Epoch: 0036 loss_train: 0.6839 acc_train: 0.7837 loss_val: 0.8485 acc_val: 0.7267
+Epoch: 0037 loss_train: 0.6595 acc_train: 0.7867 loss_val: 0.8427 acc_val: 0.7237
+Epoch: 0038 loss_train: 0.6345 acc_train: 0.7972 loss_val: 0.8381 acc_val: 0.7357
+Epoch: 0039 loss_train: 0.6103 acc_train: 0.8067 loss_val: 0.8349 acc_val: 0.7372
+Epoch: 0040 loss_train: 0.5898 acc_train: 0.8137 loss_val: 0.8334 acc_val: 0.7462
+Epoch: 0041 loss_train: 0.5698 acc_train: 0.8167 loss_val: 0.8337 acc_val: 0.7462
+Epoch: 0042 loss_train: 0.5483 acc_train: 0.8212 loss_val: 0.8358 acc_val: 0.7477
+Epoch: 0043 loss_train: 0.5265 acc_train: 0.8247 loss_val: 0.8397 acc_val: 0.7508
+Epoch: 0044 loss_train: 0.5079 acc_train: 0.8292 loss_val: 0.8456 acc_val: 0.7492
+Epoch: 0045 loss_train: 0.4877 acc_train: 0.8322 loss_val: 0.8525 acc_val: 0.7447
+Epoch: 0046 loss_train: 0.4702 acc_train: 0.8388 loss_val: 0.8603 acc_val: 0.7477
+Epoch: 0047 loss_train: 0.4494 acc_train: 0.8478 loss_val: 0.8698 acc_val: 0.7462
+Epoch: 0048 loss_train: 0.4337 acc_train: 0.8533 loss_val: 0.8809 acc_val: 0.7417
+Epoch: 0049 loss_train: 0.4156 acc_train: 0.8578 loss_val: 0.8936 acc_val: 0.7402
+Epoch: 0050 loss_train: 0.3995 acc_train: 0.8653 loss_val: 0.9074 acc_val: 0.7417
+Epoch: 0051 loss_train: 0.3842 acc_train: 0.8643 loss_val: 0.9222 acc_val: 0.7372
+Epoch: 0052 loss_train: 0.3657 acc_train: 0.8773 loss_val: 0.9390 acc_val: 0.7357
+Epoch: 0053 loss_train: 0.3496 acc_train: 0.8808 loss_val: 0.9587 acc_val: 0.7372
+Epoch: 0054 loss_train: 0.3342 acc_train: 0.8848 loss_val: 0.9803 acc_val: 0.7312
+Epoch: 0055 loss_train: 0.3183 acc_train: 0.8918 loss_val: 1.0022 acc_val: 0.7282
+Epoch: 0056 loss_train: 0.2997 acc_train: 0.9004 loss_val: 1.0245 acc_val: 0.7297
+Epoch: 0057 loss_train: 0.2826 acc_train: 0.8998 loss_val: 1.0471 acc_val: 0.7282
+Epoch: 0058 loss_train: 0.2705 acc_train: 0.9014 loss_val: 1.0700 acc_val: 0.7312
+Epoch: 0059 loss_train: 0.2493 acc_train: 0.9119 loss_val: 1.0930 acc_val: 0.7342
+Epoch: 0060 loss_train: 0.2338 acc_train: 0.9204 loss_val: 1.1163 acc_val: 0.7342
+Epoch: 0061 loss_train: 0.2192 acc_train: 0.9274 loss_val: 1.1416 acc_val: 0.7357
+Epoch: 0062 loss_train: 0.2034 acc_train: 0.9359 loss_val: 1.1693 acc_val: 0.7387
+Epoch: 0063 loss_train: 0.1880 acc_train: 0.9439 loss_val: 1.1976 acc_val: 0.7432
+Epoch: 0064 loss_train: 0.1752 acc_train: 0.9464 loss_val: 1.2253 acc_val: 0.7387
+Epoch: 0065 loss_train: 0.1605 acc_train: 0.9549 loss_val: 1.2564 acc_val: 0.7402
+Epoch: 0066 loss_train: 0.1493 acc_train: 0.9514 loss_val: 1.2885 acc_val: 0.7387
+Epoch: 0067 loss_train: 0.1369 acc_train: 0.9629 loss_val: 1.3184 acc_val: 0.7402
+Epoch: 0068 loss_train: 0.1237 acc_train: 0.9619 loss_val: 1.3475 acc_val: 0.7387
+Epoch: 0069 loss_train: 0.1141 acc_train: 0.9670 loss_val: 1.3774 acc_val: 0.7372
+Epoch: 0070 loss_train: 0.1046 acc_train: 0.9685 loss_val: 1.4064 acc_val: 0.7372
+Epoch: 0071 loss_train: 0.0957 acc_train: 0.9710 loss_val: 1.4324 acc_val: 0.7327
+Epoch: 0072 loss_train: 0.0864 acc_train: 0.9725 loss_val: 1.4580 acc_val: 0.7282
+Epoch: 0073 loss_train: 0.0794 acc_train: 0.9745 loss_val: 1.4830 acc_val: 0.7297
+Epoch: 0074 loss_train: 0.0719 acc_train: 0.9775 loss_val: 1.5067 acc_val: 0.7282
+Epoch: 0075 loss_train: 0.0650 acc_train: 0.9810 loss_val: 1.5305 acc_val: 0.7297
+Epoch: 0076 loss_train: 0.0593 acc_train: 0.9825 loss_val: 1.5557 acc_val: 0.7282
+Epoch: 0077 loss_train: 0.0555 acc_train: 0.9840 loss_val: 1.5821 acc_val: 0.7252
+Epoch: 0078 loss_train: 0.0480 acc_train: 0.9870 loss_val: 1.6092 acc_val: 0.7267
+Epoch: 0079 loss_train: 0.0456 acc_train: 0.9875 loss_val: 1.6336 acc_val: 0.7282
+Epoch: 0080 loss_train: 0.0405 acc_train: 0.9875 loss_val: 1.6592 acc_val: 0.7267
+Epoch: 0081 loss_train: 0.0359 acc_train: 0.9900 loss_val: 1.6857 acc_val: 0.7282
+Epoch: 0082 loss_train: 0.0342 acc_train: 0.9925 loss_val: 1.7128 acc_val: 0.7267
+Epoch: 0083 loss_train: 0.0307 acc_train: 0.9915 loss_val: 1.7375 acc_val: 0.7252
+Epoch: 0084 loss_train: 0.0291 acc_train: 0.9915 loss_val: 1.7580 acc_val: 0.7237
+Epoch: 0085 loss_train: 0.0253 acc_train: 0.9950 loss_val: 1.7781 acc_val: 0.7252
+Epoch: 0086 loss_train: 0.0240 acc_train: 0.9915 loss_val: 1.8004 acc_val: 0.7267
+Epoch: 0087 loss_train: 0.0223 acc_train: 0.9945 loss_val: 1.8231 acc_val: 0.7222
+Epoch: 0088 loss_train: 0.0203 acc_train: 0.9950 loss_val: 1.8434 acc_val: 0.7237
+Epoch: 0089 loss_train: 0.0180 acc_train: 0.9960 loss_val: 1.8600 acc_val: 0.7237
+Epoch: 0090 loss_train: 0.0178 acc_train: 0.9945 loss_val: 1.8726 acc_val: 0.7267
+Epoch: 0091 loss_train: 0.0173 acc_train: 0.9950 loss_val: 1.8876 acc_val: 0.7297
+Epoch: 0092 loss_train: 0.0151 acc_train: 0.9950 loss_val: 1.9051 acc_val: 0.7282
+Epoch: 0093 loss_train: 0.0131 acc_train: 0.9965 loss_val: 1.9223 acc_val: 0.7282
+Optimization Finished!
+Train cost: 29.7458s
+Loading 43th epoch
+Test set results: loss= 0.7103 accuracy= 0.7831
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+/usr/local/lib/python3.10/dist-packages/dgl/heterograph.py:3719: DGLWarning: DGLGraph.adjacency_matrix_scipy is deprecated. Please replace it with:
+
+	DGLGraph.adjacency_matrix(transpose, scipy_fmt="csr").
+
+  dgl_warning('DGLGraph.adjacency_matrix_scipy is deprecated. '
+/content/gdrive/MyDrive/FinalProjectGNN/NAGphormer/utils.py:163: UserWarning: Casting complex values to real discards the imaginary part (Triggered internally at ../aten/src/ATen/native/Copy.cpp:299.)
+  lap_pos_enc = torch.from_numpy(EigVec[:,1:pos_enc_dim+1]).float()
+TransformerModel(
+  (att_embeddings_nope): Linear(in_features=3743, out_features=512, bias=True)
+  (layers): ModuleList(
+    (0): EncoderLayer(
+      (self_attention_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (self_attention): MultiHeadAttention(
+        (linear_q): Linear(in_features=512, out_features=512, bias=True)
+        (linear_k): Linear(in_features=512, out_features=512, bias=True)
+        (linear_v): Linear(in_features=512, out_features=512, bias=True)
+        (att_dropout): Dropout(p=0.1, inplace=False)
+        (output_layer): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (self_attention_dropout): Dropout(p=0.1, inplace=False)
+      (ffn_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ffn): FeedForwardNetwork(
+        (layer1): Linear(in_features=512, out_features=1024, bias=True)
+        (gelu): GELU(approximate='none')
+        (layer2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ffn_dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (final_ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=512, out_features=256, bias=True)
+  (attn_layer): Linear(in_features=1024, out_features=1, bias=True)
+  (Linear1): Linear(in_features=256, out_features=6, bias=True)
+)
+total params: 4154632
+Epoch: 0001 loss_train: 1.8157 acc_train: 0.1447 loss_val: 1.8085 acc_val: 0.1592
+Epoch: 0002 loss_train: 1.8101 acc_train: 0.1462 loss_val: 1.8011 acc_val: 0.1757
+Epoch: 0003 loss_train: 1.8038 acc_train: 0.1662 loss_val: 1.7912 acc_val: 0.1862
+Epoch: 0004 loss_train: 1.7937 acc_train: 0.1758 loss_val: 1.7800 acc_val: 0.1997
+Epoch: 0005 loss_train: 1.7832 acc_train: 0.1938 loss_val: 1.7691 acc_val: 0.2102
+Epoch: 0006 loss_train: 1.7738 acc_train: 0.1848 loss_val: 1.7594 acc_val: 0.2342
+Epoch: 0007 loss_train: 1.7641 acc_train: 0.2153 loss_val: 1.7512 acc_val: 0.2402
+Epoch: 0008 loss_train: 1.7555 acc_train: 0.2138 loss_val: 1.7450 acc_val: 0.2417
+Epoch: 0009 loss_train: 1.7495 acc_train: 0.2238 loss_val: 1.7405 acc_val: 0.2492
+Epoch: 0010 loss_train: 1.7455 acc_train: 0.2328 loss_val: 1.7370 acc_val: 0.2613
+Epoch: 0011 loss_train: 1.7416 acc_train: 0.2619 loss_val: 1.7338 acc_val: 0.2718
+Epoch: 0012 loss_train: 1.7377 acc_train: 0.2524 loss_val: 1.7301 acc_val: 0.2868
+Epoch: 0013 loss_train: 1.7358 acc_train: 0.2639 loss_val: 1.7252 acc_val: 0.3003
+Epoch: 0014 loss_train: 1.7311 acc_train: 0.2839 loss_val: 1.7188 acc_val: 0.3153
+Epoch: 0015 loss_train: 1.7261 acc_train: 0.2934 loss_val: 1.7106 acc_val: 0.3273
+Epoch: 0016 loss_train: 1.7201 acc_train: 0.2999 loss_val: 1.7003 acc_val: 0.3589
+Epoch: 0017 loss_train: 1.7109 acc_train: 0.3295 loss_val: 1.6870 acc_val: 0.4144
+Epoch: 0018 loss_train: 1.7021 acc_train: 0.3610 loss_val: 1.6690 acc_val: 0.4685
+Epoch: 0019 loss_train: 1.6880 acc_train: 0.3976 loss_val: 1.6445 acc_val: 0.4910
+Epoch: 0020 loss_train: 1.6709 acc_train: 0.4231 loss_val: 1.6114 acc_val: 0.5270
+Epoch: 0021 loss_train: 1.6469 acc_train: 0.4657 loss_val: 1.5710 acc_val: 0.5871
+Epoch: 0022 loss_train: 1.6162 acc_train: 0.5148 loss_val: 1.5241 acc_val: 0.6141
+Epoch: 0023 loss_train: 1.5800 acc_train: 0.5418 loss_val: 1.4696 acc_val: 0.6306
+Epoch: 0024 loss_train: 1.5404 acc_train: 0.5578 loss_val: 1.4029 acc_val: 0.6592
+Epoch: 0025 loss_train: 1.4915 acc_train: 0.5824 loss_val: 1.3241 acc_val: 0.6952
+Epoch: 0026 loss_train: 1.4284 acc_train: 0.6199 loss_val: 1.2453 acc_val: 0.7177
+Epoch: 0027 loss_train: 1.3643 acc_train: 0.6485 loss_val: 1.1704 acc_val: 0.7312
+Epoch: 0028 loss_train: 1.3078 acc_train: 0.6680 loss_val: 1.1037 acc_val: 0.7387
+Epoch: 0029 loss_train: 1.2527 acc_train: 0.6710 loss_val: 1.0398 acc_val: 0.7372
+Epoch: 0030 loss_train: 1.1985 acc_train: 0.6885 loss_val: 0.9760 acc_val: 0.7553
+Epoch: 0031 loss_train: 1.1434 acc_train: 0.6980 loss_val: 0.9188 acc_val: 0.7688
+Epoch: 0032 loss_train: 1.0908 acc_train: 0.7091 loss_val: 0.8638 acc_val: 0.7778
+Epoch: 0033 loss_train: 1.0419 acc_train: 0.7156 loss_val: 0.8134 acc_val: 0.7808
+Epoch: 0034 loss_train: 0.9929 acc_train: 0.7221 loss_val: 0.7685 acc_val: 0.7868
+Epoch: 0035 loss_train: 0.9484 acc_train: 0.7396 loss_val: 0.7283 acc_val: 0.7988
+Epoch: 0036 loss_train: 0.9014 acc_train: 0.7451 loss_val: 0.6901 acc_val: 0.7988
+Epoch: 0037 loss_train: 0.8576 acc_train: 0.7551 loss_val: 0.6620 acc_val: 0.8048
+Epoch: 0038 loss_train: 0.8240 acc_train: 0.7601 loss_val: 0.6313 acc_val: 0.7988
+Epoch: 0039 loss_train: 0.7829 acc_train: 0.7697 loss_val: 0.5987 acc_val: 0.8153
+Epoch: 0040 loss_train: 0.7413 acc_train: 0.7822 loss_val: 0.5814 acc_val: 0.8183
+Epoch: 0041 loss_train: 0.7138 acc_train: 0.7842 loss_val: 0.5620 acc_val: 0.8168
+Epoch: 0042 loss_train: 0.6798 acc_train: 0.7937 loss_val: 0.5423 acc_val: 0.8213
+Epoch: 0043 loss_train: 0.6439 acc_train: 0.8027 loss_val: 0.5337 acc_val: 0.8288
+Epoch: 0044 loss_train: 0.6139 acc_train: 0.8162 loss_val: 0.5188 acc_val: 0.8243
+Epoch: 0045 loss_train: 0.5817 acc_train: 0.8237 loss_val: 0.5104 acc_val: 0.8258
+Epoch: 0046 loss_train: 0.5531 acc_train: 0.8338 loss_val: 0.5055 acc_val: 0.8393
+Epoch: 0047 loss_train: 0.5261 acc_train: 0.8403 loss_val: 0.4992 acc_val: 0.8363
+Epoch: 0048 loss_train: 0.4985 acc_train: 0.8483 loss_val: 0.4991 acc_val: 0.8288
+Epoch: 0049 loss_train: 0.4722 acc_train: 0.8568 loss_val: 0.4965 acc_val: 0.8318
+Epoch: 0050 loss_train: 0.4464 acc_train: 0.8678 loss_val: 0.4985 acc_val: 0.8258
+Epoch: 0051 loss_train: 0.4204 acc_train: 0.8718 loss_val: 0.4997 acc_val: 0.8213
+Epoch: 0052 loss_train: 0.3957 acc_train: 0.8788 loss_val: 0.5040 acc_val: 0.8303
+Epoch: 0053 loss_train: 0.3762 acc_train: 0.8843 loss_val: 0.5092 acc_val: 0.8288
+Epoch: 0054 loss_train: 0.3555 acc_train: 0.8888 loss_val: 0.5120 acc_val: 0.8318
+Epoch: 0055 loss_train: 0.3369 acc_train: 0.8923 loss_val: 0.5198 acc_val: 0.8303
+Epoch: 0056 loss_train: 0.3183 acc_train: 0.8978 loss_val: 0.5223 acc_val: 0.8348
+Epoch: 0057 loss_train: 0.3004 acc_train: 0.9014 loss_val: 0.5315 acc_val: 0.8303
+Epoch: 0058 loss_train: 0.2869 acc_train: 0.9049 loss_val: 0.5378 acc_val: 0.8348
+Epoch: 0059 loss_train: 0.2719 acc_train: 0.9079 loss_val: 0.5450 acc_val: 0.8393
+Epoch: 0060 loss_train: 0.2589 acc_train: 0.9094 loss_val: 0.5536 acc_val: 0.8393
+Epoch: 0061 loss_train: 0.2483 acc_train: 0.9139 loss_val: 0.5578 acc_val: 0.8363
+Epoch: 0062 loss_train: 0.2384 acc_train: 0.9159 loss_val: 0.5672 acc_val: 0.8393
+Epoch: 0063 loss_train: 0.2296 acc_train: 0.9149 loss_val: 0.5828 acc_val: 0.8393
+Epoch: 0064 loss_train: 0.2199 acc_train: 0.9194 loss_val: 0.5966 acc_val: 0.8408
+Epoch: 0065 loss_train: 0.2146 acc_train: 0.9199 loss_val: 0.6032 acc_val: 0.8333
+Epoch: 0066 loss_train: 0.2059 acc_train: 0.9214 loss_val: 0.6145 acc_val: 0.8288
+Epoch: 0067 loss_train: 0.1995 acc_train: 0.9239 loss_val: 0.6282 acc_val: 0.8243
+Epoch: 0068 loss_train: 0.1942 acc_train: 0.9259 loss_val: 0.6457 acc_val: 0.8168
+Epoch: 0069 loss_train: 0.1877 acc_train: 0.9254 loss_val: 0.6671 acc_val: 0.8108
+Epoch: 0070 loss_train: 0.1818 acc_train: 0.9309 loss_val: 0.6845 acc_val: 0.8093
+Epoch: 0071 loss_train: 0.1772 acc_train: 0.9324 loss_val: 0.6997 acc_val: 0.8108
+Epoch: 0072 loss_train: 0.1725 acc_train: 0.9344 loss_val: 0.7167 acc_val: 0.8123
+Epoch: 0073 loss_train: 0.1681 acc_train: 0.9374 loss_val: 0.7350 acc_val: 0.8048
+Epoch: 0074 loss_train: 0.1636 acc_train: 0.9404 loss_val: 0.7544 acc_val: 0.8003
+Epoch: 0075 loss_train: 0.1590 acc_train: 0.9404 loss_val: 0.7701 acc_val: 0.8018
+Epoch: 0076 loss_train: 0.1556 acc_train: 0.9429 loss_val: 0.7859 acc_val: 0.8003
+Epoch: 0077 loss_train: 0.1500 acc_train: 0.9429 loss_val: 0.8054 acc_val: 0.7973
+Epoch: 0078 loss_train: 0.1459 acc_train: 0.9464 loss_val: 0.8264 acc_val: 0.7988
+Epoch: 0079 loss_train: 0.1422 acc_train: 0.9474 loss_val: 0.8462 acc_val: 0.7958
+Epoch: 0080 loss_train: 0.1375 acc_train: 0.9529 loss_val: 0.8603 acc_val: 0.7898
+Epoch: 0081 loss_train: 0.1331 acc_train: 0.9554 loss_val: 0.8695 acc_val: 0.7958
+Epoch: 0082 loss_train: 0.1295 acc_train: 0.9624 loss_val: 0.8812 acc_val: 0.7928
+Epoch: 0083 loss_train: 0.1242 acc_train: 0.9644 loss_val: 0.8963 acc_val: 0.7913
+Epoch: 0084 loss_train: 0.1193 acc_train: 0.9735 loss_val: 0.9109 acc_val: 0.7913
+Epoch: 0085 loss_train: 0.1147 acc_train: 0.9740 loss_val: 0.9326 acc_val: 0.7823
+Epoch: 0086 loss_train: 0.1107 acc_train: 0.9750 loss_val: 0.9557 acc_val: 0.7763
+Epoch: 0087 loss_train: 0.1050 acc_train: 0.9815 loss_val: 0.9723 acc_val: 0.7763
+Epoch: 0088 loss_train: 0.1004 acc_train: 0.9825 loss_val: 0.9854 acc_val: 0.7718
+Epoch: 0089 loss_train: 0.0951 acc_train: 0.9880 loss_val: 1.0011 acc_val: 0.7703
+Epoch: 0090 loss_train: 0.0904 acc_train: 0.9915 loss_val: 1.0289 acc_val: 0.7628
+Epoch: 0091 loss_train: 0.0842 acc_train: 0.9935 loss_val: 1.0540 acc_val: 0.7613
+Epoch: 0092 loss_train: 0.0796 acc_train: 0.9950 loss_val: 1.0592 acc_val: 0.7598
+Epoch: 0093 loss_train: 0.0750 acc_train: 0.9965 loss_val: 1.0623 acc_val: 0.7583
+Epoch: 0094 loss_train: 0.0709 acc_train: 0.9965 loss_val: 1.0785 acc_val: 0.7568
+Epoch: 0095 loss_train: 0.0653 acc_train: 0.9975 loss_val: 1.1052 acc_val: 0.7583
+Epoch: 0096 loss_train: 0.0608 acc_train: 0.9980 loss_val: 1.1165 acc_val: 0.7568
+Epoch: 0097 loss_train: 0.0564 acc_train: 0.9985 loss_val: 1.1150 acc_val: 0.7583
+Epoch: 0098 loss_train: 0.0519 acc_train: 0.9995 loss_val: 1.1194 acc_val: 0.7658
+Epoch: 0099 loss_train: 0.0476 acc_train: 1.0000 loss_val: 1.1342 acc_val: 0.7643
+Epoch: 0100 loss_train: 0.0434 acc_train: 1.0000 loss_val: 1.1510 acc_val: 0.7628
+Epoch: 0101 loss_train: 0.0397 acc_train: 0.9995 loss_val: 1.1612 acc_val: 0.7643
+Epoch: 0102 loss_train: 0.0363 acc_train: 1.0000 loss_val: 1.1671 acc_val: 0.7568
+Epoch: 0103 loss_train: 0.0327 acc_train: 1.0000 loss_val: 1.1742 acc_val: 0.7553
+Epoch: 0104 loss_train: 0.0299 acc_train: 1.0000 loss_val: 1.1821 acc_val: 0.7583
+Epoch: 0105 loss_train: 0.0274 acc_train: 1.0000 loss_val: 1.1919 acc_val: 0.7613
+Epoch: 0106 loss_train: 0.0245 acc_train: 1.0000 loss_val: 1.2015 acc_val: 0.7583
+Epoch: 0107 loss_train: 0.0224 acc_train: 1.0000 loss_val: 1.2118 acc_val: 0.7583
+Epoch: 0108 loss_train: 0.0201 acc_train: 1.0000 loss_val: 1.2222 acc_val: 0.7583
+Epoch: 0109 loss_train: 0.0182 acc_train: 1.0000 loss_val: 1.2300 acc_val: 0.7583
+Epoch: 0110 loss_train: 0.0168 acc_train: 1.0000 loss_val: 1.2363 acc_val: 0.7643
+Epoch: 0111 loss_train: 0.0147 acc_train: 1.0000 loss_val: 1.2425 acc_val: 0.7658
+Epoch: 0112 loss_train: 0.0136 acc_train: 1.0000 loss_val: 1.2504 acc_val: 0.7688
+Epoch: 0113 loss_train: 0.0119 acc_train: 1.0000 loss_val: 1.2604 acc_val: 0.7673
+Epoch: 0114 loss_train: 0.0113 acc_train: 1.0000 loss_val: 1.2741 acc_val: 0.7643
+Optimization Finished!
+Train cost: 36.1163s
+Loading 64th epoch
+Test set results: loss= 0.5337 accuracy= 0.8313
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+/usr/local/lib/python3.10/dist-packages/dgl/heterograph.py:3719: DGLWarning: DGLGraph.adjacency_matrix_scipy is deprecated. Please replace it with:
+
+	DGLGraph.adjacency_matrix(transpose, scipy_fmt="csr").
+
+  dgl_warning('DGLGraph.adjacency_matrix_scipy is deprecated. '
+/content/gdrive/MyDrive/FinalProjectGNN/NAGphormer/utils.py:163: UserWarning: Casting complex values to real discards the imaginary part (Triggered internally at ../aten/src/ATen/native/Copy.cpp:299.)
+  lap_pos_enc = torch.from_numpy(EigVec[:,1:pos_enc_dim+1]).float()
+TransformerModel(
+  (att_embeddings_nope): Linear(in_features=3743, out_features=512, bias=True)
+  (layers): ModuleList(
+    (0): EncoderLayer(
+      (self_attention_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (self_attention): MultiHeadAttention(
+        (linear_q): Linear(in_features=512, out_features=512, bias=True)
+        (linear_k): Linear(in_features=512, out_features=512, bias=True)
+        (linear_v): Linear(in_features=512, out_features=512, bias=True)
+        (att_dropout): Dropout(p=0.1, inplace=False)
+        (output_layer): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (self_attention_dropout): Dropout(p=0.1, inplace=False)
+      (ffn_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ffn): FeedForwardNetwork(
+        (layer1): Linear(in_features=512, out_features=1024, bias=True)
+        (gelu): GELU(approximate='none')
+        (layer2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ffn_dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (final_ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=512, out_features=256, bias=True)
+  (attn_layer): Linear(in_features=1024, out_features=1, bias=True)
+  (Linear1): Linear(in_features=256, out_features=6, bias=True)
+)
+total params: 4154632
+Epoch: 0001 loss_train: 1.8142 acc_train: 0.1432 loss_val: 1.8067 acc_val: 0.1607
+Epoch: 0002 loss_train: 1.8092 acc_train: 0.1452 loss_val: 1.7990 acc_val: 0.1772
+Epoch: 0003 loss_train: 1.8029 acc_train: 0.1602 loss_val: 1.7888 acc_val: 0.1772
+Epoch: 0004 loss_train: 1.7929 acc_train: 0.1678 loss_val: 1.7770 acc_val: 0.2057
+Epoch: 0005 loss_train: 1.7819 acc_train: 0.1883 loss_val: 1.7656 acc_val: 0.2312
+Epoch: 0006 loss_train: 1.7730 acc_train: 0.1773 loss_val: 1.7559 acc_val: 0.2147
+Epoch: 0007 loss_train: 1.7637 acc_train: 0.2068 loss_val: 1.7484 acc_val: 0.2147
+Epoch: 0008 loss_train: 1.7555 acc_train: 0.2113 loss_val: 1.7429 acc_val: 0.2192
+Epoch: 0009 loss_train: 1.7512 acc_train: 0.2203 loss_val: 1.7392 acc_val: 0.2162
+Epoch: 0010 loss_train: 1.7476 acc_train: 0.2273 loss_val: 1.7365 acc_val: 0.2132
+Epoch: 0011 loss_train: 1.7455 acc_train: 0.2429 loss_val: 1.7341 acc_val: 0.2102
+Epoch: 0012 loss_train: 1.7424 acc_train: 0.2404 loss_val: 1.7303 acc_val: 0.2102
+Epoch: 0013 loss_train: 1.7416 acc_train: 0.2399 loss_val: 1.7245 acc_val: 0.2117
+Epoch: 0014 loss_train: 1.7386 acc_train: 0.2559 loss_val: 1.7173 acc_val: 0.2252
+Epoch: 0015 loss_train: 1.7343 acc_train: 0.2649 loss_val: 1.7082 acc_val: 0.2763
+Epoch: 0016 loss_train: 1.7303 acc_train: 0.2844 loss_val: 1.6966 acc_val: 0.3514
+Epoch: 0017 loss_train: 1.7233 acc_train: 0.3170 loss_val: 1.6810 acc_val: 0.5195
+Epoch: 0018 loss_train: 1.7146 acc_train: 0.3831 loss_val: 1.6589 acc_val: 0.6622
+Epoch: 0019 loss_train: 1.7010 acc_train: 0.4422 loss_val: 1.6300 acc_val: 0.7177
+Epoch: 0020 loss_train: 1.6860 acc_train: 0.4822 loss_val: 1.5973 acc_val: 0.7102
+Epoch: 0021 loss_train: 1.6668 acc_train: 0.4972 loss_val: 1.5583 acc_val: 0.7087
+Epoch: 0022 loss_train: 1.6419 acc_train: 0.5063 loss_val: 1.5124 acc_val: 0.7222
+Epoch: 0023 loss_train: 1.6152 acc_train: 0.5283 loss_val: 1.4579 acc_val: 0.7583
+Epoch: 0024 loss_train: 1.5848 acc_train: 0.5689 loss_val: 1.3895 acc_val: 0.8243
+Epoch: 0025 loss_train: 1.5469 acc_train: 0.6109 loss_val: 1.3024 acc_val: 0.9069
+Epoch: 0026 loss_train: 1.4948 acc_train: 0.6695 loss_val: 1.1999 acc_val: 0.9189
+Epoch: 0027 loss_train: 1.4356 acc_train: 0.6690 loss_val: 1.0862 acc_val: 0.9204
+Epoch: 0028 loss_train: 1.3743 acc_train: 0.6505 loss_val: 0.9676 acc_val: 0.9204
+Epoch: 0029 loss_train: 1.3123 acc_train: 0.6440 loss_val: 0.8603 acc_val: 0.9204
+Epoch: 0030 loss_train: 1.2516 acc_train: 0.6500 loss_val: 0.7561 acc_val: 0.9204
+Epoch: 0031 loss_train: 1.1898 acc_train: 0.6345 loss_val: 0.6565 acc_val: 0.9204
+Epoch: 0032 loss_train: 1.1319 acc_train: 0.6340 loss_val: 0.5694 acc_val: 0.9204
+Epoch: 0033 loss_train: 1.0754 acc_train: 0.6485 loss_val: 0.4905 acc_val: 0.9204
+Epoch: 0034 loss_train: 1.0229 acc_train: 0.6420 loss_val: 0.4266 acc_val: 0.9219
+Epoch: 0035 loss_train: 0.9783 acc_train: 0.6390 loss_val: 0.3772 acc_val: 0.9249
+Epoch: 0036 loss_train: 0.9472 acc_train: 0.6545 loss_val: 0.3700 acc_val: 0.9234
+Epoch: 0037 loss_train: 0.9254 acc_train: 0.6530 loss_val: 0.3194 acc_val: 0.9384
+Epoch: 0038 loss_train: 0.9009 acc_train: 0.6445 loss_val: 0.2832 acc_val: 0.9354
+Epoch: 0039 loss_train: 0.8484 acc_train: 0.6760 loss_val: 0.2913 acc_val: 0.9309
+Epoch: 0040 loss_train: 0.8415 acc_train: 0.6855 loss_val: 0.2212 acc_val: 0.9745
+Epoch: 0041 loss_train: 0.7865 acc_train: 0.7046 loss_val: 0.2285 acc_val: 0.9580
+Epoch: 0042 loss_train: 0.7710 acc_train: 0.7161 loss_val: 0.1775 acc_val: 0.9940
+Epoch: 0043 loss_train: 0.7074 acc_train: 0.7822 loss_val: 0.1884 acc_val: 0.9685
+Epoch: 0044 loss_train: 0.7022 acc_train: 0.7361 loss_val: 0.1515 acc_val: 0.9865
+Epoch: 0045 loss_train: 0.6361 acc_train: 0.8262 loss_val: 0.1646 acc_val: 0.9730
+Epoch: 0046 loss_train: 0.6302 acc_train: 0.7712 loss_val: 0.1441 acc_val: 0.9925
+Epoch: 0047 loss_train: 0.5753 acc_train: 0.8523 loss_val: 0.1481 acc_val: 0.9745
+Epoch: 0048 loss_train: 0.5581 acc_train: 0.8107 loss_val: 0.1206 acc_val: 0.9985
+Epoch: 0049 loss_train: 0.4849 acc_train: 0.8963 loss_val: 0.1393 acc_val: 0.9910
+Epoch: 0050 loss_train: 0.5022 acc_train: 0.8768 loss_val: 0.1414 acc_val: 0.9850
+Epoch: 0051 loss_train: 0.4422 acc_train: 0.8893 loss_val: 0.1502 acc_val: 0.9685
+Epoch: 0052 loss_train: 0.4417 acc_train: 0.8643 loss_val: 0.1010 acc_val: 1.0000
+Epoch: 0053 loss_train: 0.3782 acc_train: 0.9329 loss_val: 0.1106 acc_val: 0.9985
+Epoch: 0054 loss_train: 0.3666 acc_train: 0.9439 loss_val: 0.0873 acc_val: 0.9970
+Epoch: 0055 loss_train: 0.2979 acc_train: 0.9539 loss_val: 0.0660 acc_val: 1.0000
+Epoch: 0056 loss_train: 0.2572 acc_train: 0.9644 loss_val: 0.0734 acc_val: 1.0000
+Epoch: 0057 loss_train: 0.2774 acc_train: 0.9604 loss_val: 0.0473 acc_val: 1.0000
+Epoch: 0058 loss_train: 0.2045 acc_train: 0.9664 loss_val: 0.0427 acc_val: 0.9985
+Epoch: 0059 loss_train: 0.1839 acc_train: 0.9700 loss_val: 0.0438 acc_val: 0.9985
+Epoch: 0060 loss_train: 0.1845 acc_train: 0.9690 loss_val: 0.0414 acc_val: 1.0000
+Epoch: 0061 loss_train: 0.1761 acc_train: 0.9670 loss_val: 0.0295 acc_val: 1.0000
+Epoch: 0062 loss_train: 0.1356 acc_train: 0.9725 loss_val: 0.0276 acc_val: 0.9985
+Epoch: 0063 loss_train: 0.1233 acc_train: 0.9820 loss_val: 0.0274 acc_val: 0.9985
+Epoch: 0064 loss_train: 0.1187 acc_train: 0.9790 loss_val: 0.0223 acc_val: 1.0000
+Epoch: 0065 loss_train: 0.0988 acc_train: 0.9820 loss_val: 0.0200 acc_val: 1.0000
+Epoch: 0066 loss_train: 0.0931 acc_train: 0.9835 loss_val: 0.0162 acc_val: 1.0000
+Epoch: 0067 loss_train: 0.0733 acc_train: 0.9935 loss_val: 0.0183 acc_val: 0.9985
+Epoch: 0068 loss_train: 0.0736 acc_train: 0.9935 loss_val: 0.0175 acc_val: 0.9985
+Epoch: 0069 loss_train: 0.0660 acc_train: 0.9900 loss_val: 0.0123 acc_val: 0.9985
+Epoch: 0070 loss_train: 0.0510 acc_train: 0.9965 loss_val: 0.0109 acc_val: 1.0000
+Epoch: 0071 loss_train: 0.0523 acc_train: 0.9960 loss_val: 0.0102 acc_val: 0.9985
+Epoch: 0072 loss_train: 0.0418 acc_train: 1.0000 loss_val: 0.0114 acc_val: 0.9985
+Epoch: 0073 loss_train: 0.0402 acc_train: 0.9995 loss_val: 0.0107 acc_val: 0.9985
+Epoch: 0074 loss_train: 0.0370 acc_train: 0.9980 loss_val: 0.0084 acc_val: 0.9985
+Epoch: 0075 loss_train: 0.0306 acc_train: 0.9995 loss_val: 0.0067 acc_val: 0.9985
+Epoch: 0076 loss_train: 0.0263 acc_train: 1.0000 loss_val: 0.0067 acc_val: 0.9985
+Epoch: 0077 loss_train: 0.0249 acc_train: 1.0000 loss_val: 0.0073 acc_val: 0.9985
+Epoch: 0078 loss_train: 0.0242 acc_train: 1.0000 loss_val: 0.0074 acc_val: 0.9985
+Epoch: 0079 loss_train: 0.0222 acc_train: 1.0000 loss_val: 0.0068 acc_val: 0.9985
+Epoch: 0080 loss_train: 0.0192 acc_train: 1.0000 loss_val: 0.0059 acc_val: 0.9985
+Epoch: 0081 loss_train: 0.0167 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0082 loss_train: 0.0153 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0083 loss_train: 0.0137 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0084 loss_train: 0.0130 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0085 loss_train: 0.0127 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0086 loss_train: 0.0113 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0087 loss_train: 0.0106 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0088 loss_train: 0.0095 acc_train: 1.0000 loss_val: 0.0044 acc_val: 0.9985
+Epoch: 0089 loss_train: 0.0085 acc_train: 1.0000 loss_val: 0.0043 acc_val: 0.9985
+Epoch: 0090 loss_train: 0.0082 acc_train: 1.0000 loss_val: 0.0046 acc_val: 0.9985
+Epoch: 0091 loss_train: 0.0080 acc_train: 1.0000 loss_val: 0.0050 acc_val: 0.9985
+Epoch: 0092 loss_train: 0.0073 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0093 loss_train: 0.0071 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0094 loss_train: 0.0066 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0095 loss_train: 0.0058 acc_train: 1.0000 loss_val: 0.0045 acc_val: 0.9985
+Epoch: 0096 loss_train: 0.0055 acc_train: 1.0000 loss_val: 0.0042 acc_val: 0.9985
+Epoch: 0097 loss_train: 0.0052 acc_train: 1.0000 loss_val: 0.0041 acc_val: 0.9985
+Epoch: 0098 loss_train: 0.0049 acc_train: 1.0000 loss_val: 0.0042 acc_val: 0.9985
+Epoch: 0099 loss_train: 0.0047 acc_train: 1.0000 loss_val: 0.0044 acc_val: 0.9985
+Epoch: 0100 loss_train: 0.0046 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0101 loss_train: 0.0045 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0102 loss_train: 0.0041 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0103 loss_train: 0.0039 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0104 loss_train: 0.0036 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0105 loss_train: 0.0034 acc_train: 1.0000 loss_val: 0.0046 acc_val: 0.9985
+Epoch: 0106 loss_train: 0.0033 acc_train: 1.0000 loss_val: 0.0045 acc_val: 0.9985
+Epoch: 0107 loss_train: 0.0032 acc_train: 1.0000 loss_val: 0.0044 acc_val: 0.9985
+Epoch: 0108 loss_train: 0.0031 acc_train: 1.0000 loss_val: 0.0044 acc_val: 0.9985
+Epoch: 0109 loss_train: 0.0029 acc_train: 1.0000 loss_val: 0.0044 acc_val: 0.9985
+Epoch: 0110 loss_train: 0.0029 acc_train: 1.0000 loss_val: 0.0045 acc_val: 0.9985
+Epoch: 0111 loss_train: 0.0027 acc_train: 1.0000 loss_val: 0.0046 acc_val: 0.9985
+Epoch: 0112 loss_train: 0.0026 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0113 loss_train: 0.0024 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0114 loss_train: 0.0024 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0115 loss_train: 0.0024 acc_train: 1.0000 loss_val: 0.0050 acc_val: 0.9985
+Epoch: 0116 loss_train: 0.0022 acc_train: 1.0000 loss_val: 0.0050 acc_val: 0.9985
+Epoch: 0117 loss_train: 0.0021 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0118 loss_train: 0.0021 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0119 loss_train: 0.0020 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0120 loss_train: 0.0020 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0121 loss_train: 0.0019 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0122 loss_train: 0.0019 acc_train: 1.0000 loss_val: 0.0047 acc_val: 0.9985
+Epoch: 0123 loss_train: 0.0018 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0124 loss_train: 0.0017 acc_train: 1.0000 loss_val: 0.0048 acc_val: 0.9985
+Epoch: 0125 loss_train: 0.0017 acc_train: 1.0000 loss_val: 0.0049 acc_val: 0.9985
+Epoch: 0126 loss_train: 0.0016 acc_train: 1.0000 loss_val: 0.0050 acc_val: 0.9985
+Epoch: 0127 loss_train: 0.0016 acc_train: 1.0000 loss_val: 0.0051 acc_val: 0.9985
+Epoch: 0128 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0129 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0130 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0131 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0132 loss_train: 0.0014 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0133 loss_train: 0.0014 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0134 loss_train: 0.0013 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0135 loss_train: 0.0013 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0136 loss_train: 0.0013 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0137 loss_train: 0.0012 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0138 loss_train: 0.0012 acc_train: 1.0000 loss_val: 0.0052 acc_val: 0.9985
+Epoch: 0139 loss_train: 0.0012 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0140 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0141 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0142 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0143 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0053 acc_val: 0.9985
+Epoch: 0144 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0054 acc_val: 0.9985
+Epoch: 0145 loss_train: 0.0010 acc_train: 1.0000 loss_val: 0.0054 acc_val: 0.9985
+Epoch: 0146 loss_train: 0.0010 acc_train: 1.0000 loss_val: 0.0055 acc_val: 0.9985
+Epoch: 0147 loss_train: 0.0010 acc_train: 1.0000 loss_val: 0.0055 acc_val: 0.9985
+Optimization Finished!
+Train cost: 46.6129s
+Loading 70th epoch
+Test set results: loss= 0.0086 accuracy= 1.0000
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+/usr/local/lib/python3.10/dist-packages/dgl/heterograph.py:3719: DGLWarning: DGLGraph.adjacency_matrix_scipy is deprecated. Please replace it with:
+
+	DGLGraph.adjacency_matrix(transpose, scipy_fmt="csr").
+
+  dgl_warning('DGLGraph.adjacency_matrix_scipy is deprecated. '
+/content/gdrive/MyDrive/FinalProjectGNN/NAGphormer/utils.py:163: UserWarning: Casting complex values to real discards the imaginary part (Triggered internally at ../aten/src/ATen/native/Copy.cpp:299.)
+  lap_pos_enc = torch.from_numpy(EigVec[:,1:pos_enc_dim+1]).float()
+TransformerModel(
+  (att_embeddings_nope): Linear(in_features=3743, out_features=512, bias=True)
+  (layers): ModuleList(
+    (0): EncoderLayer(
+      (self_attention_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (self_attention): MultiHeadAttention(
+        (linear_q): Linear(in_features=512, out_features=512, bias=True)
+        (linear_k): Linear(in_features=512, out_features=512, bias=True)
+        (linear_v): Linear(in_features=512, out_features=512, bias=True)
+        (att_dropout): Dropout(p=0.1, inplace=False)
+        (output_layer): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (self_attention_dropout): Dropout(p=0.1, inplace=False)
+      (ffn_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ffn): FeedForwardNetwork(
+        (layer1): Linear(in_features=512, out_features=1024, bias=True)
+        (gelu): GELU(approximate='none')
+        (layer2): Linear(in_features=1024, out_features=512, bias=True)
+      )
+      (ffn_dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (final_ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=512, out_features=256, bias=True)
+  (attn_layer): Linear(in_features=1024, out_features=1, bias=True)
+  (Linear1): Linear(in_features=256, out_features=6, bias=True)
+)
+total params: 4154632
+Epoch: 0001 loss_train: 1.8130 acc_train: 0.1532 loss_val: 1.8054 acc_val: 0.1772
+Epoch: 0002 loss_train: 1.8079 acc_train: 0.1652 loss_val: 1.7974 acc_val: 0.1772
+Epoch: 0003 loss_train: 1.8018 acc_train: 0.1723 loss_val: 1.7867 acc_val: 0.1847
+Epoch: 0004 loss_train: 1.7920 acc_train: 0.1803 loss_val: 1.7750 acc_val: 0.2583
+Epoch: 0005 loss_train: 1.7812 acc_train: 0.1983 loss_val: 1.7642 acc_val: 0.2673
+Epoch: 0006 loss_train: 1.7729 acc_train: 0.2028 loss_val: 1.7553 acc_val: 0.2132
+Epoch: 0007 loss_train: 1.7641 acc_train: 0.2138 loss_val: 1.7480 acc_val: 0.2132
+Epoch: 0008 loss_train: 1.7562 acc_train: 0.2133 loss_val: 1.7431 acc_val: 0.2102
+Epoch: 0009 loss_train: 1.7517 acc_train: 0.2143 loss_val: 1.7405 acc_val: 0.2102
+Epoch: 0010 loss_train: 1.7490 acc_train: 0.2208 loss_val: 1.7391 acc_val: 0.2102
+Epoch: 0011 loss_train: 1.7475 acc_train: 0.2263 loss_val: 1.7376 acc_val: 0.2102
+Epoch: 0012 loss_train: 1.7456 acc_train: 0.2344 loss_val: 1.7352 acc_val: 0.2102
+Epoch: 0013 loss_train: 1.7455 acc_train: 0.2258 loss_val: 1.7313 acc_val: 0.2117
+Epoch: 0014 loss_train: 1.7438 acc_train: 0.2434 loss_val: 1.7259 acc_val: 0.2177
+Epoch: 0015 loss_train: 1.7422 acc_train: 0.2464 loss_val: 1.7197 acc_val: 0.2432
+Epoch: 0016 loss_train: 1.7400 acc_train: 0.2564 loss_val: 1.7121 acc_val: 0.2688
+Epoch: 0017 loss_train: 1.7361 acc_train: 0.2629 loss_val: 1.7029 acc_val: 0.2778
+Epoch: 0018 loss_train: 1.7322 acc_train: 0.2839 loss_val: 1.6911 acc_val: 0.2778
+Epoch: 0019 loss_train: 1.7249 acc_train: 0.2784 loss_val: 1.6758 acc_val: 0.2598
+Epoch: 0020 loss_train: 1.7192 acc_train: 0.2619 loss_val: 1.6564 acc_val: 0.2477
+Epoch: 0021 loss_train: 1.7079 acc_train: 0.2544 loss_val: 1.6320 acc_val: 0.3273
+Epoch: 0022 loss_train: 1.6929 acc_train: 0.2789 loss_val: 1.6023 acc_val: 0.4174
+Epoch: 0023 loss_train: 1.6787 acc_train: 0.3200 loss_val: 1.5667 acc_val: 0.5631
+Epoch: 0024 loss_train: 1.6591 acc_train: 0.3976 loss_val: 1.5253 acc_val: 0.6456
+Epoch: 0025 loss_train: 1.6390 acc_train: 0.4487 loss_val: 1.4788 acc_val: 0.7342
+Epoch: 0026 loss_train: 1.6152 acc_train: 0.4917 loss_val: 1.4219 acc_val: 0.8033
+Epoch: 0027 loss_train: 1.5829 acc_train: 0.5343 loss_val: 1.3552 acc_val: 0.8333
+Epoch: 0028 loss_train: 1.5502 acc_train: 0.5543 loss_val: 1.2731 acc_val: 0.8919
+Epoch: 0029 loss_train: 1.5056 acc_train: 0.5674 loss_val: 1.1728 acc_val: 0.9159
+Epoch: 0030 loss_train: 1.4558 acc_train: 0.5874 loss_val: 1.0579 acc_val: 0.9204
+Epoch: 0031 loss_train: 1.3947 acc_train: 0.6119 loss_val: 0.9372 acc_val: 0.9204
+Epoch: 0032 loss_train: 1.3326 acc_train: 0.6174 loss_val: 0.8169 acc_val: 0.9204
+Epoch: 0033 loss_train: 1.2704 acc_train: 0.6104 loss_val: 0.7052 acc_val: 0.9204
+Epoch: 0034 loss_train: 1.2034 acc_train: 0.6365 loss_val: 0.6113 acc_val: 0.9204
+Epoch: 0035 loss_train: 1.1390 acc_train: 0.6595 loss_val: 0.5313 acc_val: 0.9204
+Epoch: 0036 loss_train: 1.0734 acc_train: 0.6890 loss_val: 0.5002 acc_val: 0.9204
+Epoch: 0037 loss_train: 1.0098 acc_train: 0.7056 loss_val: 0.4545 acc_val: 0.9204
+Epoch: 0038 loss_train: 0.9556 acc_train: 0.7666 loss_val: 0.3837 acc_val: 0.9204
+Epoch: 0039 loss_train: 0.8450 acc_train: 0.7767 loss_val: 0.3592 acc_val: 0.9204
+Epoch: 0040 loss_train: 0.7914 acc_train: 0.7972 loss_val: 0.3853 acc_val: 0.9204
+Epoch: 0041 loss_train: 0.7651 acc_train: 0.8443 loss_val: 0.2949 acc_val: 0.9204
+Epoch: 0042 loss_train: 0.6320 acc_train: 0.8678 loss_val: 0.3177 acc_val: 0.9204
+Epoch: 0043 loss_train: 0.6819 acc_train: 0.7682 loss_val: 0.3013 acc_val: 0.9204
+Epoch: 0044 loss_train: 0.5675 acc_train: 0.9069 loss_val: 0.3373 acc_val: 0.9204
+Epoch: 0045 loss_train: 0.6158 acc_train: 0.8132 loss_val: 0.2690 acc_val: 0.9204
+Epoch: 0046 loss_train: 0.4961 acc_train: 0.8953 loss_val: 0.2749 acc_val: 0.9204
+Epoch: 0047 loss_train: 0.5208 acc_train: 0.8653 loss_val: 0.2215 acc_val: 0.9414
+Epoch: 0048 loss_train: 0.4201 acc_train: 0.9084 loss_val: 0.1712 acc_val: 0.9955
+Epoch: 0049 loss_train: 0.3397 acc_train: 0.9569 loss_val: 0.2041 acc_val: 0.9249
+Epoch: 0050 loss_train: 0.3962 acc_train: 0.9049 loss_val: 0.1535 acc_val: 0.9970
+Epoch: 0051 loss_train: 0.3149 acc_train: 0.9594 loss_val: 0.1281 acc_val: 1.0000
+Epoch: 0052 loss_train: 0.2700 acc_train: 0.9599 loss_val: 0.1127 acc_val: 1.0000
+Epoch: 0053 loss_train: 0.2396 acc_train: 0.9740 loss_val: 0.1168 acc_val: 1.0000
+Epoch: 0054 loss_train: 0.2413 acc_train: 0.9654 loss_val: 0.1057 acc_val: 0.9985
+Epoch: 0055 loss_train: 0.2105 acc_train: 0.9619 loss_val: 0.0759 acc_val: 1.0000
+Epoch: 0056 loss_train: 0.1644 acc_train: 0.9850 loss_val: 0.0733 acc_val: 1.0000
+Epoch: 0057 loss_train: 0.1726 acc_train: 0.9850 loss_val: 0.0628 acc_val: 1.0000
+Epoch: 0058 loss_train: 0.1413 acc_train: 0.9915 loss_val: 0.0619 acc_val: 1.0000
+Epoch: 0059 loss_train: 0.1361 acc_train: 0.9920 loss_val: 0.0474 acc_val: 1.0000
+Epoch: 0060 loss_train: 0.1128 acc_train: 1.0000 loss_val: 0.0380 acc_val: 1.0000
+Epoch: 0061 loss_train: 0.0984 acc_train: 1.0000 loss_val: 0.0364 acc_val: 1.0000
+Epoch: 0062 loss_train: 0.0945 acc_train: 0.9950 loss_val: 0.0330 acc_val: 1.0000
+Epoch: 0063 loss_train: 0.0833 acc_train: 0.9915 loss_val: 0.0294 acc_val: 1.0000
+Epoch: 0064 loss_train: 0.0746 acc_train: 0.9995 loss_val: 0.0249 acc_val: 1.0000
+Epoch: 0065 loss_train: 0.0625 acc_train: 1.0000 loss_val: 0.0206 acc_val: 1.0000
+Epoch: 0066 loss_train: 0.0558 acc_train: 1.0000 loss_val: 0.0166 acc_val: 1.0000
+Epoch: 0067 loss_train: 0.0518 acc_train: 1.0000 loss_val: 0.0142 acc_val: 1.0000
+Epoch: 0068 loss_train: 0.0467 acc_train: 1.0000 loss_val: 0.0132 acc_val: 1.0000
+Epoch: 0069 loss_train: 0.0393 acc_train: 1.0000 loss_val: 0.0131 acc_val: 1.0000
+Epoch: 0070 loss_train: 0.0379 acc_train: 1.0000 loss_val: 0.0096 acc_val: 1.0000
+Epoch: 0071 loss_train: 0.0290 acc_train: 1.0000 loss_val: 0.0076 acc_val: 1.0000
+Epoch: 0072 loss_train: 0.0268 acc_train: 1.0000 loss_val: 0.0068 acc_val: 1.0000
+Epoch: 0073 loss_train: 0.0256 acc_train: 1.0000 loss_val: 0.0063 acc_val: 1.0000
+Epoch: 0074 loss_train: 0.0233 acc_train: 1.0000 loss_val: 0.0052 acc_val: 1.0000
+Epoch: 0075 loss_train: 0.0187 acc_train: 1.0000 loss_val: 0.0047 acc_val: 1.0000
+Epoch: 0076 loss_train: 0.0176 acc_train: 1.0000 loss_val: 0.0041 acc_val: 1.0000
+Epoch: 0077 loss_train: 0.0154 acc_train: 1.0000 loss_val: 0.0033 acc_val: 1.0000
+Epoch: 0078 loss_train: 0.0130 acc_train: 1.0000 loss_val: 0.0026 acc_val: 1.0000
+Epoch: 0079 loss_train: 0.0117 acc_train: 1.0000 loss_val: 0.0023 acc_val: 1.0000
+Epoch: 0080 loss_train: 0.0116 acc_train: 1.0000 loss_val: 0.0020 acc_val: 1.0000
+Epoch: 0081 loss_train: 0.0104 acc_train: 1.0000 loss_val: 0.0018 acc_val: 1.0000
+Epoch: 0082 loss_train: 0.0088 acc_train: 1.0000 loss_val: 0.0017 acc_val: 1.0000
+Epoch: 0083 loss_train: 0.0078 acc_train: 1.0000 loss_val: 0.0016 acc_val: 1.0000
+Epoch: 0084 loss_train: 0.0072 acc_train: 1.0000 loss_val: 0.0013 acc_val: 1.0000
+Epoch: 0085 loss_train: 0.0063 acc_train: 1.0000 loss_val: 0.0012 acc_val: 1.0000
+Epoch: 0086 loss_train: 0.0055 acc_train: 1.0000 loss_val: 0.0011 acc_val: 1.0000
+Epoch: 0087 loss_train: 0.0050 acc_train: 1.0000 loss_val: 0.0010 acc_val: 1.0000
+Epoch: 0088 loss_train: 0.0048 acc_train: 1.0000 loss_val: 0.0010 acc_val: 1.0000
+Epoch: 0089 loss_train: 0.0046 acc_train: 1.0000 loss_val: 0.0009 acc_val: 1.0000
+Epoch: 0090 loss_train: 0.0042 acc_train: 1.0000 loss_val: 0.0009 acc_val: 1.0000
+Epoch: 0091 loss_train: 0.0038 acc_train: 1.0000 loss_val: 0.0008 acc_val: 1.0000
+Epoch: 0092 loss_train: 0.0035 acc_train: 1.0000 loss_val: 0.0007 acc_val: 1.0000
+Epoch: 0093 loss_train: 0.0032 acc_train: 1.0000 loss_val: 0.0007 acc_val: 1.0000
+Epoch: 0094 loss_train: 0.0029 acc_train: 1.0000 loss_val: 0.0006 acc_val: 1.0000
+Epoch: 0095 loss_train: 0.0026 acc_train: 1.0000 loss_val: 0.0006 acc_val: 1.0000
+Epoch: 0096 loss_train: 0.0024 acc_train: 1.0000 loss_val: 0.0005 acc_val: 1.0000
+Epoch: 0097 loss_train: 0.0023 acc_train: 1.0000 loss_val: 0.0005 acc_val: 1.0000
+Epoch: 0098 loss_train: 0.0021 acc_train: 1.0000 loss_val: 0.0005 acc_val: 1.0000
+Epoch: 0099 loss_train: 0.0020 acc_train: 1.0000 loss_val: 0.0005 acc_val: 1.0000
+Epoch: 0100 loss_train: 0.0019 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0101 loss_train: 0.0018 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0102 loss_train: 0.0017 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0103 loss_train: 0.0016 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0104 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0105 loss_train: 0.0015 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0106 loss_train: 0.0014 acc_train: 1.0000 loss_val: 0.0004 acc_val: 1.0000
+Epoch: 0107 loss_train: 0.0013 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0108 loss_train: 0.0012 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0109 loss_train: 0.0012 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0110 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0111 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0112 loss_train: 0.0011 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0113 loss_train: 0.0010 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0114 loss_train: 0.0009 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0115 loss_train: 0.0009 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0116 loss_train: 0.0009 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0117 loss_train: 0.0009 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0118 loss_train: 0.0009 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0119 loss_train: 0.0008 acc_train: 1.0000 loss_val: 0.0003 acc_val: 1.0000
+Epoch: 0120 loss_train: 0.0008 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0121 loss_train: 0.0007 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0122 loss_train: 0.0008 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0123 loss_train: 0.0007 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0124 loss_train: 0.0007 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0125 loss_train: 0.0007 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0126 loss_train: 0.0007 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0127 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0128 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0129 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0130 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0131 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0132 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0133 loss_train: 0.0006 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0134 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0135 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0136 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0137 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0138 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0139 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0140 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0141 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0142 loss_train: 0.0005 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0143 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0144 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0002 acc_val: 1.0000
+Epoch: 0145 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0146 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0147 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0148 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0149 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0150 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0151 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0152 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0153 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0154 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0155 loss_train: 0.0004 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0156 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0157 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0158 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0159 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0160 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0161 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0162 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0163 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0164 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0165 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0166 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0167 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0168 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0169 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0170 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0171 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0172 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0173 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0174 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0175 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0176 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0177 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0178 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0179 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0180 loss_train: 0.0003 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0181 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0182 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0183 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0184 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0185 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0186 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0187 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0188 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0189 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0190 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0191 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0192 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0193 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0194 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0195 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0196 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0197 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0198 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0199 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Epoch: 0200 loss_train: 0.0002 acc_train: 1.0000 loss_val: 0.0001 acc_val: 1.0000
+Optimization Finished!
+Train cost: 63.2895s
+Loading 200th epoch
+Test set results: loss= 0.0001 accuracy= 1.0000

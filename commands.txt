@@ -1,0 +1,8 @@
+!python train.py --dataset pubmed --epoch 200 --batch_size 2000 --dropout 0.1 --hidden_dim 512 \
+          --hops 7  --n_heads 8 --n_layers 1 --pe_dim 15 --peak_lr 0.001  --attack dice --attperc 60 --TrainTest train --weight_decay=1e-05
+!python train.py --dataset citeseer --epoch 200 --batch_size 2000 --dropout 0.1 --hidden_dim 512 \
+          --hops 7  --n_heads 8 --n_layers 1 --pe_dim 15 --peak_lr 0.001  --attack dice --attperc 60 --TrainTest train --weight_decay=1e-05
+!python train.py --dataset cora --epoch 200 --batch_size 2000 --dropout 0.1 --hidden_dim 512 \
+          --hops 7  --n_heads 8 --n_layers 1 --pe_dim 15 --peak_lr 0.001  --attack dice --attperc 60 --TrainTest train --weight_decay=1e-05
+
+
